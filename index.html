@@ -12,8 +12,8 @@
     <style>
   
         body {
-            background-image: url('another.jpeg');
-            /* background-size: cover; */
+            background-image: url('code.jpeg');
+            background-size: 100%;
             /* background-repeat: no-repeat;
             background-position: center;
             font-family: 'Roboto', sans-serif;
@@ -23,23 +23,21 @@
             animation: cambiarDegradado 30s ease infinite;
             
         } */
-            background-size: cover;
-            animation: zoomSuave 10s ease-in-out infinite;
+            
+            
+            animation: animateBackground 20s linear infinite;
         }
 
-        @keyframes zoomSuave {
-        0% {
-            background-size: 100%;
-            background-position: 0% 50%;
-
-        }
-        50% {
-            background-size: 102%;
-        }
-        100% {
-            background-size: 100%;
-            background-position: 100% 50%;
-        }
+        @keyframes animateBackground {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
         }
         header, section, footer {
             border-radius: 8px;
@@ -143,7 +141,7 @@
                 <h3 class="text-2xl font-semibold mt-8 mb-2" data-lang="es">Trabajo actual</h3>
                 <h3 class="text-2xl font-semibold mt-8 mb-2 hidden" data-lang="en">Acual Job</h3>
                 <h3 class="text-2xl font-semibold mt-8 mb-2 hidden" data-lang="de">Aktuelle Stelle</h3>
-                <p data-lang="es">Actualmente trabajo en <a href="https://www.linkedin.com/company/pronetwork-deutschland-gmbh/posts/?feedView=all" class="text-blue-700"> ProNetwork Deutschland GmbH</a> donde desarrollamos software para uso interno en el área de contabilidad a las empresas como <a href="https://www.hobax.de/" class="text-blue-700" >Hobax</a> y <a href="https://www.mermagen.de" class="text-blue-700">Mermagen</a>, entre otras.</p>
+                <p data-lang="es">Actualmente trabajo en <a href="https://www.linkedin.com/company/pronetwork-deutschland-gmbh/posts/?feedView=all" class="text-blue-700"> ProNetwork Deutschland GmbH</a> donde desarrollamos software para uso interno en el área de contabilidad en las empresas <a href="https://www.hobax.de/" class="text-blue-700" >Hobax</a> y <a href="https://www.mermagen.de" class="text-blue-700">Mermagen</a>, entre otras.</p>
                 
                 <p data-lang="es">Mi tarea principal es la creación de aplicaciones para ayudar al personal de contabilidad a gestionar los datos de manera automatizada, accionadas por IA y para dispositivos donde hace falta como en el caso de dispositivos móbiles. Del mismo modo automatizando tareas y creando servicios automatizados en la red interna. </p>
                 
