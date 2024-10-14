@@ -6,12 +6,48 @@
     <title>Alejandro M. Pacheco - Blog Personal</title>
     <script src="https://unpkg.com/htmx.org@1.7.0"></script>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@^3.0/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #FAFAFA;
+            color: #333333;
+        }
+        header, section, footer {
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 24px;
+            margin-bottom: 24px;
+            background-color: #FFFFFF;
+        }
+        h1, h2, h3 {
+            color: #0D47A1;
+        }
+        a {
+            color: #1E88E5;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        button {
+            background-color: #1E88E5;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #1565C0;
+        }
+    </style>
 </head>
-<body class="bg-gray-100 text-gray-800 font-sans">
+<body class="bg-gray-100 text-gray-800">
     <div class="container mx-auto p-8">
         <header class="text-center mb-12">
             <h1 class="text-4xl font-bold mb-4">Alejandro M. Pacheco - Blog Personal</h1>
-            <p>Bienvenido a mi blog personal. Esta plataforma no solo funciona como mi tarjeta de presentación profesional, sino que también busca ofrecer una perspectiva de mis intereses y logros académicos y profesionales. Puedes explorar mi experiencia y proyectos para tener una mejor idea de mi trayectoria.</p>
+            <p class="text-lg">Bienvenido a mi blog personal. Esta plataforma no solo funciona como mi tarjeta de presentación profesional, sino que también busca ofrecer una perspectiva de mis intereses y logros académicos y profesionales. Puedes explorar mi experiencia y proyectos para tener una mejor idea de mi trayectoria.</p>
         </header>
         
         <section id="sobre-mi" class="mb-12">
@@ -28,7 +64,7 @@
             
             <div>
                 <h3 class="text-2xl font-semibold mt-8 mb-2">Lenguajes de Programación</h3>
-                <ul class="list-disc list-inside">
+                <ul class="list-disc list-inside pl-4">
                     <li><strong>Python</strong>: Para aplicaciones de ciencia de datos y desarrollo de herramientas que facilitan el trabajo con grandes volúmenes de información.</li>
                     <li><strong>Rust</strong>: Cuando la eficiencia y la seguridad en la gestión de memoria son esenciales. Disfruto trabajar en proyectos donde Rust puede marcar la diferencia.</li>
                     <li><strong>Go</strong>: Utilizado especialmente en la creación de servicios backend eficientes.</li>
@@ -38,7 +74,7 @@
             
             <div>
                 <h3 class="text-2xl font-semibold mt-8 mb-2">Áreas de Aplicación</h3>
-                <ul class="list-disc list-inside">
+                <ul class="list-disc list-inside pl-4">
                     <li><strong>Ciencia de Datos</strong>: He colaborado en proyectos que involucran la manipulación de datos, limpieza, y modelado para tomar decisiones fundamentadas.</li>
                     <li><strong>Aplicaciones de LLM</strong>: Desarrollo de soluciones con Modelos de Lenguaje (LLM) para asistir a los trabajadores en su productividad y automatización de tareas.</li>
                     <li><strong>Manejo de APIs</strong>: Experiencia en la integración y gestión de APIs, particularmente con Datev, y el desarrollo de aplicaciones para servidores, dispositivos móviles, escritorios y la web.</li>
@@ -54,7 +90,7 @@
         
         <section id="proyectos-recientes" class="mb-12">
             <h2 class="text-3xl font-semibold mb-4">Proyectos Recientes</h2>
-            <ul class="list-decimal list-inside">
+            <ul class="list-decimal list-inside pl-4">
                 <li><strong>Plataforma de Ciencia de Datos</strong>: Desarrollo de una plataforma interna para analizar datos y generar reportes de forma rápida y eficiente.</li>
                 <li><strong>Aplicación de Asistencia con LLM</strong>: Creación de una herramienta que integra modelos de lenguaje para proporcionar sugerencias automáticas y aumentar la productividad en el lugar de trabajo.</li>
                 <li><strong>Aplicaciones Multiplataforma</strong>: Desarrollo de soluciones que funcionan en dispositivos móviles, escritorios y web, utilizando Kotlin y su capacidad multiplataforma.</li>
