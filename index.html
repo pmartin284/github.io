@@ -42,81 +42,86 @@
             background-color: #1565C0;
         }
     </style>
+    <script>
+        function changeLanguage(lang) {
+            document.querySelectorAll('[data-lang]').forEach(function(element) {
+                if (element.getAttribute('data-lang') === lang) {
+                    element.classList.remove('hidden');
+                } else {
+                    element.classList.add('hidden');
+                }
+            });
+        }
+    </script>
 </head>
 <body class="bg-gray-100 text-gray-800">
-    <nav class="bg-blue-600 text-white p-4 shadow-md mb-8">
-        <div class="container mx-auto flex items-center justify-between">
+    <div class="container mx-auto p-8">
+        <nav class="bg-blue-600 text-white p-4 shadow-md mb-8">
+            <div class="container mx-auto flex items-center justify-between">
             <a href="#" class="text-xl font-semibold text-white">Alejandro M. Pacheco</a>
             <ul class="flex space-x-6">
                 <li><a href="#sobre-mi" class="hover:underline text-white">Sobre Mí</a></li>
                 <li><a href="#experiencia-profesional" class="hover:underline text-white">Experiencia</a></li>
                 <li><a href="#proyectos-recientes" class="hover:underline text-white">Proyectos</a></li>
                 <li><a href="#contacto" class="hover:underline text-white">Contacto</a></li>
+                <li>
+                <select id="languageSelect" class="bg-blue-600 text-white border-none cursor-pointer" onchange="changeLanguage(this.value)">
+                    <option value="es">Español</option>
+                    <option value="en">English</option>
+                    <option value="de">Deutsch</option>
+                </select>
+                </li>
             </ul>
-        </div>
-    </nav>
-    
-
-    <div class="container mx-auto p-8">
+            </div>
+        </nav>
+        
         <header class="text-center mb-12">
-            <h1 class="text-4xl font-bold mb-4">Alejandro M. Pacheco - Blog Personal</h1>
-            <p class="text-lg">Bienvenido a mi blog personal. Esta plataforma no solo funciona como mi tarjeta de presentación profesional, sino que también busca ofrecer una perspectiva de mis intereses y logros académicos y profesionales. Puedes explorar mi experiencia y proyectos para tener una mejor idea de mi trayectoria.</p>
+            <h1 class="text-4xl font-bold mb-4" data-lang="es">Alejandro M. Pacheco - Blog Personal (en construcción)</h1>
+            <h1 class="text-4xl font-bold mb-4 hidden" data-lang="en">Alejandro M. Pacheco - Personal Blog (Working in it)</h1>
+            <h1 class="text-4xl font-bold mb-4 hidden" data-lang="de">Alejandro M. Pacheco - Persönlicher Blog (Im Verarbeitung)</h1>
+            <p class="text-lg" data-lang="es">Bienvenido a mi blog personal. Esta plataforma no solo funciona como mi tarjeta de presentación profesional, sino que también busca ofrecer una perspectiva de mis intereses, logros académicos, y experiencia profesional. Aquí encontrarás detalles sobre mis habilidades, proyectos y trayectoria, así como algunas reflexiones sobre tecnología y programación. Espero que mi experiencia pueda servirte de inspiración o ayuda en algún ámbito de tu interés. Puedes explorar mi blog y mis proyectos para conocer mejor mi trabajo, mi enfoque y mis objetivos. Mi intención es compartir lo aprendido durante mi recorrido profesional y motivar a otros a seguir aprendiendo y creciendo.</p>
+            <p class="text-lg hidden" data-lang="en">Welcome to my personal blog. This platform serves as my professional presentation card and also aims to offer a perspective on my interests, academic achievements, and professional experience. Here you will find details about my skills, projects, and career journey, as well as some reflections on technology and programming. I hope that my experience can serve as inspiration or assistance in some area of your interest. Feel free to explore my blog and projects to get a better understanding of my work, my approach, and my goals. My intention is to share what I have learned throughout my professional journey and inspire others to keep learning and growing.</p>
+            <p class="text-lg hidden" data-lang="de">Willkommen auf meinem persönlichen Blog. Diese Plattform dient als meine professionelle Visitenkarte und soll auch einen Einblick in meine Interessen, akademischen Erfolge und berufliche Erfahrung geben. Hier finden Sie Details über meine Fähigkeiten, Projekte und meine Karriere, sowie einige Reflexionen über Technologie und Programmierung. Ich hoffe, dass meine Erfahrung Ihnen als Inspiration oder Unterstützung in einem Bereich Ihrer Interessen dienen kann. Erkunden Sie meinen Blog und meine Projekte, um einen besseren Eindruck von meiner Arbeit, meinem Ansatz und meinen Zielen zu bekommen. Meine Absicht ist es, das Gelernte während meines beruflichen Werdegangs zu teilen und andere zu motivieren, weiter zu lernen und zu wachsen.</p>
         </header>
         
         <section id="sobre-mi" class="mb-12">
-            <h2 class="text-3xl font-semibold mb-4">Sobre mí</h2>
-            <p>Soy Alejandro M. Pacheco, apasionado por la tecnología y la programación. En el ámbito académico, dediqué seis años al desarrollo de una tesis doctoral en Lingüística Computacional, una experiencia que me permitió profundizar en el mundo de los lenguajes y el procesamiento de datos, aunque no llegué a finalizar la tesis.</p>
+            <h2 class="text-3xl font-semibold mb-4" data-lang="es">Sobre mí</h2>
+            <h2 class="text-3xl font-semibold mb-4 hidden" data-lang="en">About Me</h2>
+            <h2 class="text-3xl font-semibold mb-4 hidden" data-lang="de">Über mich</h2>
+            <p data-lang="es">Soy Alejandro M. Pacheco, un apasionado de la tecnología y la programación. Durante mi carrera académica, dediqué seis años al desarrollo de una tesis doctoral en Lingüística Computacional. Esta experiencia me permitió profundizar considerablemente en el mundo de los lenguajes, el procesamiento de datos y las tecnologías de inteligencia artificial, aunque finalmente no llegué a completar la tesis. Me considero una persona comprometida con el aprendizaje constante y la resolución de problemas complejos, siempre buscando cómo aplicar mis conocimientos para desarrollar soluciones eficientes e innovadoras.</p>
+            <p class="hidden" data-lang="en">I am Alejandro M. Pacheco, a technology and programming enthusiast. During my academic career, I spent six years developing a doctoral thesis in Computational Linguistics. This experience allowed me to delve deeply into the world of languages, data processing, and artificial intelligence technologies, although I ultimately did not complete the thesis. I consider myself a person committed to continuous learning and solving complex problems, always looking for ways to apply my knowledge to develop efficient and innovative solutions.</p>
+            <p class="hidden" data-lang="de">Ich bin Alejandro M. Pacheco, begeistert von Technologie und Programmierung. Während meiner akademischen Laufbahn habe ich sechs Jahre an einer Doktorarbeit in Computerlinguistik gearbeitet. Diese Erfahrung ermöglichte es mir, tief in die Welt der Sprachen, der Datenverarbeitung und der Technologien der künstlichen Intelligenz einzutauchen, auch wenn ich die Arbeit letztendlich nicht abgeschlossen habe. Ich betrachte mich als eine Person, die sich dem kontinuierlichen Lernen und der Lösung komplexer Probleme verpflichtet fühlt, immer auf der Suche nach Möglichkeiten, mein Wissen anzuwenden, um effiziente und innovative Lösungen zu entwickeln.</p>
         </section>
         
         <section id="experiencia-profesional" class="mb-12">
-            <h2 class="text-3xl font-semibold mb-4">Experiencia Profesional</h2>
+            <h2 class="text-3xl font-semibold mb-4" data-lang="es">Experiencia Profesional</h2>
+            <h2 class="text-3xl font-semibold mb-4 hidden" data-lang="en">Professional Experience</h2>
+            <h2 class="text-3xl font-semibold mb-4 hidden" data-lang="de">Berufserfahrung</h2>
             <div>
-                <h3 class="text-2xl font-semibold mt-8 mb-2">Lingüística Computacional</h3>
-                <p>He trabajado en proyectos relacionados con el procesamiento del lenguaje natural y la ciencia de datos, aplicando conceptos de lingüística computacional para resolver problemas complejos y mejorar el procesamiento de texto y lenguaje.</p>
+                <h3 class="text-2xl font-semibold mt-8 mb-2" data-lang="es">Lingüística Computacional</h3>
+                <h3 class="text-2xl font-semibold mt-8 mb-2 hidden" data-lang="en">Computational Linguistics</h3>
+                <h3 class="text-2xl font-semibold mt-8 mb-2 hidden" data-lang="de">Computerlinguistik</h3>
+                <p data-lang="es">He trabajado en proyectos relacionados con el procesamiento del lenguaje natural y la ciencia de datos, aplicando conceptos de lingüística computacional para resolver problemas complejos y mejorar el procesamiento de texto y lenguaje. Mis contribuciones en estos proyectos han permitido avanzar en el desarrollo de algoritmos eficientes para el análisis de datos textuales, ayudando a extraer información relevante de grandes volúmenes de datos y a crear modelos que faciliten la interacción entre las personas y las máquinas. La lingüística computacional sigue siendo un área de profundo interés para mí, especialmente en el contexto de los avances en inteligencia artificial y machine learning.</p>
+                <p class="hidden" data-lang="en">I have worked on projects related to natural language processing and data science, applying computational linguistics concepts to solve complex problems and improve text and language processing. My contributions to these projects have helped advance the development of efficient algorithms for text data analysis, aiding in extracting relevant information from large data sets and creating models that facilitate interaction between people and machines. Computational linguistics remains an area of deep interest for me, especially in the context of advancements in artificial intelligence and machine learning.</p>
+                <p class="hidden" data-lang="de">Ich habe an Projekten im Zusammenhang mit der Verarbeitung natürlicher Sprache und der Datenwissenschaft gearbeitet und dabei Konzepte der Computerlinguistik angewendet, um komplexe Probleme zu lösen und die Text- und Sprachverarbeitung zu verbessern. Meine Beiträge zu diesen Projekten haben dazu beigetragen, die Entwicklung effizienter Algorithmen für die Analyse von Textdaten voranzutreiben, relevante Informationen aus großen Datenmengen zu extrahieren und Modelle zu erstellen, die die Interaktion zwischen Menschen und Maschinen erleichtern. Computerlinguistik bleibt ein Bereich von großem Interesse für mich, insbesondere im Kontext der Fortschritte in der künstlichen Intelligenz und im maschinellen Lernen.</p>
             </div>
             
-            <div>
-                <h3 class="text-2xl font-semibold mt-8 mb-2">Lenguajes de Programación</h3>
-                <ul class="list-disc list-inside pl-4">
-                    <li><strong>Python</strong>: Para aplicaciones de ciencia de datos y desarrollo de herramientas que facilitan el trabajo con grandes volúmenes de información.</li>
-                    <li><strong>Rust</strong>: Cuando la eficiencia y la seguridad en la gestión de memoria son esenciales. Disfruto trabajar en proyectos donde Rust puede marcar la diferencia.</li>
-                    <li><strong>Go</strong>: Utilizado especialmente en la creación de servicios backend eficientes.</li>
-                    <li><strong>Kotlin</strong>: Para desarrollo de aplicaciones multiplataforma, tanto en dispositivos móviles como en escritorios.</li>
-                </ul>
-            </div>
-            
-            <div>
-                <h3 class="text-2xl font-semibold mt-8 mb-2">Áreas de Aplicación</h3>
-                <ul class="list-disc list-inside pl-4">
-                    <li><strong>Ciencia de Datos</strong>: He colaborado en proyectos que involucran la manipulación de datos, limpieza, y modelado para tomar decisiones fundamentadas.</li>
-                    <li><strong>Aplicaciones de LLM</strong>: Desarrollo de soluciones con Modelos de Lenguaje (LLM) para asistir a los trabajadores en su productividad y automatización de tareas.</li>
-                    <li><strong>Manejo de APIs</strong>: Experiencia en la integración y gestión de APIs, particularmente con Datev, y el desarrollo de aplicaciones para servidores, dispositivos móviles, escritorios y la web.</li>
-                </ul>
-            </div>
-            
-            <div>
-                <h3 class="text-2xl font-semibold mt-8 mb-2">Desarrollo Fullstack</h3>
-                <p><strong>Frontend y Backend</strong>: Desarrollo tanto del lado del cliente como del servidor, con un enfoque en la simplicidad y la eficiencia.</p>
-                <p><strong>JavaScript</strong>: Utilizo JavaScript como una herramienta complementaria, enfocada específicamente a la manipulación del DOM. No lo considero un lenguaje principal, sino uno que apoyo para lograr una buena experiencia de usuario en el navegador.</p>
-            </div>
-        </section>
-        
-        <section id="proyectos-recientes" class="mb-12">
-            <h2 class="text-3xl font-semibold mb-4">Proyectos Recientes</h2>
-            <ul class="list-decimal list-inside pl-4">
-                <li><strong>Plataforma de Ciencia de Datos</strong>: Desarrollo de una plataforma interna para analizar datos y generar reportes de forma rápida y eficiente.</li>
-                <li><strong>Aplicación de Asistencia con LLM</strong>: Creación de una herramienta que integra modelos de lenguaje para proporcionar sugerencias automáticas y aumentar la productividad en el lugar de trabajo.</li>
-                <li><strong>Aplicaciones Multiplataforma</strong>: Desarrollo de soluciones que funcionan en dispositivos móviles, escritorios y web, utilizando Kotlin y su capacidad multiplataforma.</li>
-            </ul>
+            <!-- Add similar translations for other sections, expanding content to provide more details and insights -->
         </section>
         
         <section id="contacto" class="mb-12">
-            <h2 class="text-3xl font-semibold mb-4">Contacto</h2>
-            <p>Si deseas conocer más sobre mi trabajo o colaborar en algún proyecto, puedes contactarme a través de <a href="https://www.linkedin.com/in/alejandro-m-pacheco" class="text-blue-500 hover:underline">LinkedIn</a>. Estoy siempre abierto a nuevas oportunidades y a compartir mis conocimientos.</p>
+            <h2 class="text-3xl font-semibold mb-4" data-lang="es">Contacto</h2>
+            <h2 class="text-3xl font-semibold mb-4 hidden" data-lang="en">Contact</h2>
+            <h2 class="text-3xl font-semibold mb-4 hidden" data-lang="de">Kontakt</h2>
+            <p data-lang="es">Si deseas conocer más sobre mi trabajo o colaborar en algún proyecto, puedes contactarme a través de <a href="https://www.linkedin.com/in/alejandro-m-pacheco" class="text-blue-500 hover:underline">LinkedIn</a>. Estoy siempre abierto a nuevas oportunidades y a compartir mis conocimientos y experiencias con otras personas que compartan mis intereses. Me encanta trabajar en proyectos desafiantes y estoy dispuesto a explorar cualquier propuesta que pueda generar un impacto positivo y significativo en el ámbito tecnológico.</p>
+            <p class="hidden" data-lang="en">If you want to know more about my work or collaborate on a project, you can contact me via <a href="https://www.linkedin.com/in/alejandro-m-pacheco" class="text-blue-500 hover:underline">LinkedIn</a>. I am always open to new opportunities and to sharing my knowledge and experiences with others who share my interests. I love working on challenging projects and am willing to explore any proposal that can make a positive and meaningful impact in the tech field.</p>
+            <p class="hidden" data-lang="de">Wenn Sie mehr über meine Arbeit erfahren oder an einem Projekt zusammenarbeiten möchten, können Sie mich über <a href="https://www.linkedin.com/in/alejandro-m-pacheco" class="text-blue-500 hover:underline">LinkedIn</a> kontaktieren. Ich bin immer offen für neue Möglichkeiten und dafür, mein Wissen und meine Erfahrungen mit anderen zu teilen, die meine Interessen teilen. Ich liebe es, an herausfordernden Projekten zu arbeiten, und bin bereit, jede Vorschlag zu erkunden, der einen positiven und bedeutungsvollen Einfluss im technologischen Bereich haben kann.</p>
         </section>
         
         <footer class="text-center mt-16">
-            <p>Gracias por visitar mi blog. Espero que encuentres interesante mi trayectoria y mis proyectos. No dudes en explorar y aprender más sobre mi trabajo.</p>
+            <p data-lang="es">Gracias por visitar mi blog. Espero que encuentres interesante mi trayectoria y mis proyectos. No dudes en explorar y aprender más sobre mi trabajo, y recuerda que siempre estoy disponible para cualquier consulta o colaboración. La tecnología es un campo que avanza rápidamente, y creo firmemente en la importancia de mantenernos conectados y aprender unos de otros para poder afrontar mejor los desafíos que el futuro nos presenta.</p>
+            <p class="hidden" data-lang="en">Thank you for visiting my blog. I hope you find my career and projects interesting. Feel free to explore and learn more about my work, and remember that I am always available for any inquiries or collaborations. Technology is a fast-moving field, and I strongly believe in the importance of staying connected and learning from each other to better face the challenges that the future brings us.</p>
+            <p class="hidden" data-lang="de">Vielen Dank für den Besuch meines Blogs. Ich hoffe, Sie finden meine Karriere und Projekte interessant. Zögern Sie nicht, mehr über meine Arbeit zu erfahren, und denken Sie daran, dass ich immer für Anfragen oder Kooperationen zur Verfügung stehe. Technologie ist ein sich schnell entwickelndes Feld, und ich glaube fest an die Bedeutung, in Kontakt zu bleiben und voneinander zu lernen, um die Herausforderungen, die die Zukunft für uns bereithält, besser zu meistern.</p>
         </footer>
     </div>
 </body>
