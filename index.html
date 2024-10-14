@@ -6,8 +6,11 @@
     <title>Alejandro M. Pacheco - Blog Personal</title>
     <script src="https://unpkg.com/htmx.org@1.7.0"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
+  
         body {
             background-image: url('blog.jpeg');
             background-size: cover;
@@ -20,8 +23,12 @@
         header, section, footer {
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 24px;
-            margin-bottom: 24px;
+            padding: 48px;
+            margin-bottom: 48px;
+            min-height: 70vh;
+            flex-direction: column;
+            justify-content: center;
+
     
         }
         h1, h2, h3 {
@@ -46,6 +53,7 @@
             background-color: #1565C0;
         }
     </style>
+
     <script>
         function changeLanguage(lang) {
             document.querySelectorAll('[data-lang]').forEach(function(element) {
@@ -88,7 +96,7 @@
             <p class="text-lg hidden" data-lang="de">Willkommen auf meinem persönlichen Blog. Diese Plattform dient als meine professionelle Visitenkarte und soll auch einen Einblick in meine Interessen, akademischen Erfolge und berufliche Erfahrung geben. Hier finden Sie Details über meine Fähigkeiten, Projekte und meine Karriere, sowie einige Reflexionen über Technologie und Programmierung. Ich hoffe, dass meine Erfahrung Ihnen als Inspiration oder Unterstützung in einem Bereich Ihrer Interessen dienen kann. Erkunden Sie meinen Blog und meine Projekte, um einen besseren Eindruck von meiner Arbeit, meinem Ansatz und meinen Zielen zu bekommen. Meine Absicht ist es, das Gelernte während meines beruflichen Werdegangs zu teilen und andere zu motivieren, weiter zu lernen und zu wachsen.</p>
         </header>
         
-        <section id="sobre-mi" class="mb-12 backdrop-blur-lg bg-white/30">
+        <section id="sobre-mi" class="mb-12 backdrop-blur-lg bg-white/30" data-aos="fade-up">
             <h2 class="text-3xl font-semibold mb-4" data-lang="es">Sobre mí</h2>
             <h2 class="text-3xl font-semibold mb-4 hidden" data-lang="en">About Me</h2>
             <h2 class="text-3xl font-semibold mb-4 hidden" data-lang="de">Über mich</h2>
@@ -97,7 +105,7 @@
             <p class="hidden" data-lang="de">Ich bin Alejandro M. Pacheco, begeistert von Technologie und Programmierung. Während meiner akademischen Laufbahn habe ich sechs Jahre an einer Doktorarbeit in Computerlinguistik gearbeitet. Diese Erfahrung ermöglichte es mir, tief in die Welt der Sprachen, der Datenverarbeitung und der Technologien der künstlichen Intelligenz einzutauchen, auch wenn ich die Arbeit letztendlich nicht abgeschlossen habe aufgrund der Coronavirus-Krise. Ich betrachte mich als eine Person, die sich dem kontinuierlichen Lernen und der Lösung komplexer Probleme verpflichtet fühlt, immer auf der Suche nach Möglichkeiten, mein Wissen anzuwenden, um effiziente und innovative Lösungen zu entwickeln.</p>
         </section>
         
-        <section id="experiencia-profesional" class="mb-12 backdrop-blur-lg bg-white/30">
+        <section id="experiencia-profesional" class="mb-12 backdrop-blur-lg bg-white/30" data-aos="fade-down">
             <h2 class="text-3xl font-semibold mb-4" data-lang="es">Experiencia Profesional</h2>
             <h2 class="text-3xl font-semibold mb-4 hidden" data-lang="en">Professional Experience</h2>
             <h2 class="text-3xl font-semibold mb-4 hidden" data-lang="de">Berufserfahrung</h2>
@@ -113,7 +121,7 @@
             
         </section>
 
-        <section id="lenguajes-programacion" class="mb-12 backdrop-blur-lg bg-white/30">
+        <section id="lenguajes-programacion" class="mb-12 backdrop-blur-lg bg-white/30" data-aos="fade-left">
             <h2 class="text-3xl font-semibold mb-4" data-lang="es">Lenguajes de Programación</h2>
             <h2 class="text-3xl font-semibold mb-4 hidden" data-lang="en">Programming Languages</h2>
             <h2 class="text-3xl font-semibold mb-4 hidden" data-lang="de">Programmiersprachen</h2>
@@ -136,7 +144,7 @@
             </ul>
         </section>
 
-        <section id="contacto" class="mb-12 backdrop-blur-lg bg-white/30">
+        <section id="contacto" class="mb-12 backdrop-blur-lg bg-white/30" data-aos="fade-right">
             <h2 class="text-3xl font-semibold mb-4" data-lang="es">Contacto</h2>
             <h2 class="text-3xl font-semibold mb-4 hidden" data-lang="en">Contact</h2>
             <h2 class="text-3xl font-semibold mb-4 hidden" data-lang="de">Kontakt</h2>
@@ -145,11 +153,18 @@
             <p class="hidden" data-lang="de">Wenn Sie mehr über meine Arbeit erfahren oder an einem Projekt zusammenarbeiten möchten, können Sie mich über <a href="https://www.linkedin.com/in/alejandro-m-pacheco" class="text-blue-500 hover:underline">LinkedIn</a> kontaktieren. Ich bin immer offen für neue Möglichkeiten und dafür, mein Wissen und meine Erfahrungen mit anderen zu teilen, die meine Interessen teilen. Ich liebe es, an herausfordernden Projekten zu arbeiten, und bin bereit, jede Vorschlag zu erkunden, der einen positiven und bedeutungsvollen Einfluss im technologischen Bereich haben kann.</p>
         </section>
         
-        <footer class="text-center mt-16 backdrop-blur-lg bg-white/30">
+        <footer class="text-center mt-16 backdrop-blur-lg bg-white/30" data-aos="fade-up">
             <p data-lang="es">Gracias por visitar mi blog. Espero que encuentres interesante mi trayectoria y mis proyectos. No dudes en explorar y aprender más sobre mi trabajo, y recuerda que siempre estoy disponible para cualquier consulta o colaboración. La tecnología es un campo que avanza rápidamente, y creo firmemente en la importancia de mantenernos conectados y aprender unos de otros para poder afrontar mejor los desafíos que el futuro nos presenta.</p>
             <p class="hidden" data-lang="en">Thank you for visiting my blog. I hope you find my career and projects interesting. Feel free to explore and learn more about my work, and remember that I am always available for any inquiries or collaborations. Technology is a fast-moving field, and I strongly believe in the importance of staying connected and learning from each other to better face the challenges that the future brings us.</p>
             <p class="hidden" data-lang="de">Vielen Dank für den Besuch meines Blogs. Ich hoffe, Sie finden meine Karriere und Projekte interessant. Zögern Sie nicht, mehr über meine Arbeit zu erfahren, und denken Sie daran, dass ich immer für Anfragen oder Kooperationen zur Verfügung stehe. Technologie ist ein sich schnell entwickelndes Feld, und ich glaube fest an die Bedeutung, in Kontakt zu bleiben und voneinander zu lernen, um die Herausforderungen, die die Zukunft für uns bereithält, besser zu meistern.</p>
         </footer>
     </div>
+
+    <script>
+        AOS.init({
+            duration: 1000, 
+            once: true, 
+        });
+    </script>
 </body>
 </html>
